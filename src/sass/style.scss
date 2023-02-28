@@ -1,0 +1,175 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+	height: 100vh;
+}
+
+.welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25%;
+	background-color: white;
+	border-radius: 10px;
+	cursor: auto;
+	min-width: 400px;
+}
+
+.tarcza {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: transparent;
+	z-index: 20;
+}
+
+.score {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 200px;
+	width: 200px;
+
+}
+
+.tarcza:hover {
+	cursor: crosshair;
+}
+
+.ammo {
+	display: none;
+	position: absolute;
+	top: 70%;
+	left: 2%;
+	overflow: hidden;
+	height: 250px;
+	width: 300px;
+	transition: display 0.5s;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.score {
+	display: none;
+	position: absolute;
+	flex-direction: column;
+	left: 10px;
+	top: 10px;
+	width: auto;
+	height: auto;
+padding: 1em 1em;
+
+	border-radius: 10px;
+}
+
+.shotscore {
+	color: rgb(143, 255, 128);
+	font-size: .8rem;
+	padding: .2em;
+}
+
+p {text-align: center;
+margin-bottom: 1em;}
+
+.ammo-visible {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: top 0.5s;
+}
+
+.ammo1 {
+	background-image: url(/dist/img/bullet.png);
+	height: 50px;
+	width: 250px;
+}
+
+.welcome__title {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+}
+
+.welcome__picture {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+}
+.welcome__picture-mysliwy {
+	height: 250px;
+}
+
+.welcome__btn {
+	padding: 0.5em 1em;
+	width: 50%;
+	margin-bottom: 1.5em;
+	background-color: red;
+	border: none;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 1rem;
+	text-transform: capitalize;
+	color: white;
+}
+
+.welcome__btn:hover {
+	background-color: rgb(53, 0, 0);
+	cursor: pointer;
+}
+
+.circle {
+	position: absolute;
+	display: flex;
+	height: 80px;
+	width: 80px;
+	align-items: center;
+	justify-content: center;
+	background-image: url(/dist/img/bugs.png);
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	animation: zoom 1s;
+}
+
+.circle:hover {
+	border: 2px solid #ff0000;
+	background-image: url(/dist/img/bugs_aimed.png);
+}
+
+.btn {
+	z-index: 5;
+}
+
+@keyframes zoom {
+	0% {
+		background-color: rgb(255, 255, 255, 0);
+		transform: scale(0);
+	}
+
+	15% {
+		background-color: rgb(255, 255, 255, 1);
+		transform: scale(1);
+	}
+
+	85% {
+		background-color: rgb(255, 255, 255, 1);
+		transform: scale(1);
+	}
+
+	100% {
+		background-color: rgb(255, 255, 255, 0);
+		transform: scale(0);
+	}
+}
